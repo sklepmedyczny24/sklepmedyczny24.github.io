@@ -262,25 +262,19 @@
         line-height: 1.7;
       }
 
-      .location {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 1.8rem;
-        align-items: center;
-      }
-
       .map {
         border-radius: 24px;
         overflow: hidden;
         border: 1px solid var(--line);
-        min-height: 300px;
+        min-height: 360px;
+        margin-bottom: 1.6rem;
       }
 
       iframe {
         border: 0;
         width: 100%;
         height: 100%;
-        min-height: 320px;
+        min-height: 420px;
       }
 
       .address {
@@ -405,7 +399,7 @@
           </p>
           <div class="cta">
             <a class="button" href="tel:+48426565708">Zadzwoń do nas</a>
-            <a class="button secondary" href="mailto:apteka@omega.lodz.pl">Napisz email</a>
+            <a class="button secondary" href="#lokalizacja">Zobacz mapę</a>
           </div>
         </div>
         <div class="hero-card reveal delay-2">
@@ -419,7 +413,36 @@
         </div>
       </section>
 
-      <section id="oferta" class="section reveal delay-1">
+      <section id="lokalizacja" class="section reveal delay-1">
+        <h2>Odwiedź nas w Łodzi</h2>
+        <div class="map">
+          <iframe
+            title="Mapa Apteka Omega"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d19742.776648113628!2d19.477142!3d51.790681!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x149a2c434a6a22f9!2zQXB0ZWthIE9tZWdhIC0gU2tsZXAgTWVkeWN6bnksIMWBw7Nkxbo!5e0!3m2!1spl!2spl!4v1541672837492"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="card address" id="kontakt">
+          <h3>Dane kontaktowe</h3>
+          <div>
+            Apteka Omega - Sklep Medyczny 24<br />
+            <span>Boya-Żeleńskiego 12, 91-704 Łódź</span>
+          </div>
+          <div>
+            Telefon: <a href="tel:+48426565708">42 656 57 08</a>
+          </div>
+          <div>
+            Email: <span>apteka@omega.lodz.pl</span>
+          </div>
+          <div>
+            Godziny otwarcia: <span>codziennie do 21:00 (również w weekendy)</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="oferta" class="section reveal delay-2">
         <h2>Oferta dopasowana do Twoich potrzeb</h2>
         <div class="cards">
           <article class="card">
@@ -446,7 +469,7 @@
         </div>
       </section>
 
-      <section id="refundacja" class="section reveal delay-2">
+      <section id="refundacja" class="section reveal delay-3">
         <h2>Refundacja sprzętu ortopedycznego NFZ</h2>
         <div class="cards">
           <article class="card">
@@ -463,37 +486,6 @@
               sprzętu i formalnościach.
             </p>
           </article>
-        </div>
-      </section>
-
-      <section id="lokalizacja" class="section reveal delay-3">
-        <h2>Odwiedź nas w Łodzi</h2>
-        <div class="location">
-          <div class="map">
-            <iframe
-              title="Mapa Apteka Omega"
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d19742.776648113628!2d19.477142!3d51.790681!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x149a2c434a6a22f9!2zQXB0ZWthIE9tZWdhIC0gU2tsZXAgTWVkeWN6bnksIMWBw7Nkxbo!5e0!3m2!1spl!2spl!4v1541672837492"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="card address" id="kontakt">
-            <h3>Dane kontaktowe</h3>
-            <div>
-              Apteka Omega - Sklep Medyczny 24<br />
-              <span>Boya-Żeleńskiego 12, 91-704 Łódź</span>
-            </div>
-            <div>
-              Telefon: <a href="tel:+48426565708">42 656 57 08</a>
-            </div>
-            <div>
-              Email: <a href="mailto:apteka@omega.lodz.pl">apteka@omega.lodz.pl</a>
-            </div>
-            <div>
-              Godziny otwarcia: <span>codziennie do 21:00 (również w weekendy)</span>
-            </div>
-          </div>
         </div>
       </section>
     </main>
