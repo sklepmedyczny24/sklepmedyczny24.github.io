@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sklep medyczno-ortopedyczny | Apteka Omega | Zapraszamy</title>
+    <meta
+      name="description"
+      content="Sklep medyczny Omega w Łodzi. Sprzęt ortopedyczny, rehabilitacyjny i refundacja NFZ. Zapraszamy do kontaktu i zakupów stacjonarnych."
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@300;500;700&display=swap");
+
+      :root {
+        color-scheme: light;
+        --ink: #112018;
+        --muted: #47544b;
+        --accent: #2f8b5f;
+        --accent-strong: #1c6a45;
+        --cream: #f5f1e8;
+        --sand: #efe7d8;
+        --line: rgba(17, 32, 24, 0.12);
+        --shadow: 0 20px 60px rgba(17, 32, 24, 0.16);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Manrope", "Segoe UI", sans-serif;
+        color: var(--ink);
+        background: radial-gradient(circle at 15% 10%, #d9efe5 0%, transparent 45%),
+          radial-gradient(circle at 80% 15%, #f0d9c6 0%, transparent 40%),
+          linear-gradient(180deg, #f8f4eb 0%, #f2eee7 100%);
+      }
+
+      body::before,
+      body::after {
+        content: "";
+        position: fixed;
+        width: 42vw;
+        height: 42vw;
+        border-radius: 40% 60% 55% 45%;
+        z-index: -1;
+        filter: blur(0px);
+        opacity: 0.35;
+      }
+
+      body::before {
+        background: radial-gradient(circle, #f7c7a0 0%, transparent 70%);
+        top: -20vw;
+        right: -10vw;
+      }
+
+      body::after {
+        background: radial-gradient(circle, #8ed1b0 0%, transparent 70%);
+        bottom: -20vw;
+        left: -10vw;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .container {
+        width: min(1100px, 92vw);
+        margin: 0 auto;
+      }
+
+      .topbar {
+        background: rgba(17, 32, 24, 0.92);
+        color: #fff;
+        font-size: 0.9rem;
+      }
+
+      .topbar .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.65rem 0;
+        gap: 1rem;
+      }
+
+      .topbar a {
+        color: #f7f1e3;
+        font-weight: 600;
+      }
+
+      header {
+        padding: 1.8rem 0 0;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+      }
+
+      .brand-logo {
+        width: 64px;
+        height: 64px;
+        border-radius: 16px;
+        background: #fff;
+        padding: 8px;
+        box-shadow: 0 12px 30px rgba(17, 32, 24, 0.18);
+        border: 1px solid rgba(17, 32, 24, 0.08);
+        object-fit: contain;
+      }
+
+      .brand-title {
+        font-family: "Fraunces", "Georgia", serif;
+        font-size: 1.4rem;
+        letter-spacing: 0.5px;
+      }
+
+      .brand-subtitle {
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--muted);
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 1.5rem;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--muted);
+      }
+
+      main {
+        padding: 3.5rem 0 4.5rem;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 2.5rem;
+        align-items: center;
+        margin-bottom: 3.5rem;
+      }
+
+      .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 0.8rem;
+        color: var(--accent-strong);
+        font-weight: 700;
+        margin: 0 0 0.8rem;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Fraunces", "Georgia", serif;
+        margin: 0 0 1rem;
+      }
+
+      h1 {
+        font-size: clamp(2.3rem, 4vw, 3.8rem);
+        line-height: 1.1;
+      }
+
+      .lead {
+        font-size: 1.05rem;
+        color: var(--muted);
+        line-height: 1.7;
+        max-width: 34rem;
+      }
+
+      .cta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 1.6rem;
+      }
+
+      .button {
+        padding: 0.85rem 1.6rem;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        background: var(--accent);
+        color: #fff;
+        font-weight: 700;
+        letter-spacing: 0.4px;
+        box-shadow: 0 10px 24px rgba(47, 139, 95, 0.2);
+      }
+
+      .button.secondary {
+        background: transparent;
+        border-color: var(--accent);
+        color: var(--accent-strong);
+      }
+
+      .notice {
+        margin-top: 1.5rem;
+        padding: 1rem 1.2rem;
+        background: #fff6ec;
+        border-left: 4px solid #f3a45a;
+        border-radius: 12px;
+        color: #66401f;
+        font-weight: 600;
+      }
+
+      .hero-card {
+        background: #fff;
+        padding: 2rem;
+        border-radius: 28px;
+        box-shadow: var(--shadow);
+        border: 1px solid rgba(17, 32, 24, 0.08);
+      }
+
+      .hero-card h3 {
+        font-size: 1.4rem;
+      }
+
+      .hero-card ul {
+        padding-left: 1.1rem;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .section {
+        margin-top: 3.5rem;
+      }
+
+      .section h2 {
+        font-size: 2rem;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.5rem;
+        margin-top: 1.6rem;
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.9);
+        padding: 1.6rem;
+        border-radius: 22px;
+        border: 1px solid var(--line);
+        box-shadow: 0 18px 40px rgba(17, 32, 24, 0.08);
+      }
+
+      .card h3 {
+        margin-bottom: 0.7rem;
+      }
+
+      .card p {
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .location {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.8rem;
+        align-items: center;
+      }
+
+      .map {
+        border-radius: 24px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        min-height: 300px;
+      }
+
+      iframe {
+        border: 0;
+        width: 100%;
+        height: 100%;
+        min-height: 320px;
+      }
+
+      .address {
+        display: grid;
+        gap: 0.7rem;
+        font-weight: 600;
+      }
+
+      .address span {
+        color: var(--muted);
+        font-weight: 500;
+      }
+
+      footer {
+        margin-top: 4rem;
+        padding: 2.8rem 0 3.5rem;
+        border-top: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.75);
+      }
+
+      .footer-logos {
+        padding-top: 0.6rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+      }
+
+      .footer-logos img {
+        max-height: 110px;
+        width: auto;
+        display: block;
+        object-fit: contain;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(16px);
+        animation: fadeUp 0.9s ease forwards;
+      }
+
+      .delay-1 {
+        animation-delay: 0.1s;
+      }
+
+      .delay-2 {
+        animation-delay: 0.25s;
+      }
+
+      .delay-3 {
+        animation-delay: 0.4s;
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(16px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .reveal {
+          opacity: 1;
+          transform: none;
+          animation: none;
+        }
+      }
+
+      @media (max-width: 860px) {
+        .nav-links {
+          display: none;
+        }
+        .topbar .container {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .notice {
+          font-size: 0.95rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="container">
+        <span>Sklep stacjonarny w Łodzi • czynne codziennie do 21:00</span>
+        <a href="tel:+48426565708">Zadzwoń: 42 656 57 08</a>
+      </div>
+    </div>
+
+    <header class="container">
+      <div class="nav">
+        <div class="brand">
+          <img class="brand-logo" src="assets/logo.png" alt="Apteka Omega - Sklep Medyczny 24" />
+          <div>
+            <div class="brand-title">Apteka Omega</div>
+            <div class="brand-subtitle">Sklep Medyczny 24</div>
+          </div>
+        </div>
+        <div class="nav-links">
+          <a href="#oferta">Oferta</a>
+          <a href="#refundacja">Refundacja NFZ</a>
+          <a href="#lokalizacja">Lokalizacja</a>
+          <a href="#kontakt">Kontakt</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <div class="reveal">
+          <p class="eyebrow">Sklep medyczno-ortopedyczny</p>
+          <h1>Sklep medyczny Omega z Łodzi</h1>
+          <p class="lead">
+            Jako specjaliści w dziedzinie medycyny wiemy, jak ważne jest odpowiednie
+            leczenie. Oferujemy sprzęt ortopedyczny i rehabilitacyjny najwyższej jakości,
+            który realnie poprawia komfort życia.
+          </p>
+          <div class="cta">
+            <a class="button" href="tel:+48426565708">Zadzwoń do nas</a>
+            <a class="button secondary" href="mailto:apteka@omega.lodz.pl">Napisz email</a>
+          </div>
+        </div>
+        <div class="hero-card reveal delay-2">
+          <h3>W czym pomagamy?</h3>
+          <ul>
+            <li>Ortezy, wkładki i szyny stabilizujące stawy.</li>
+            <li>Sprzęt ułatwiający poruszanie się: kule, balkoniki, wózki.</li>
+            <li>Artykuły rehabilitacyjne, przeciwodleżynowe i stomijne.</li>
+            <li>Wsparcie w realizacji wniosków refundacyjnych NFZ.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="oferta" class="section reveal delay-1">
+        <h2>Oferta dopasowana do Twoich potrzeb</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Ortezy i stabilizatory</h3>
+            <p>
+              Ortezy na nadgarstek, łokieć, kolano czy staw skokowy, a także szyny i
+              akcesoria korekcyjne dla dzieci.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Rehabilitacja w domu</h3>
+            <p>
+              Materace i poduszki przeciwodleżynowe, cewniki urologiczne, zestawy infuzyjne
+              oraz inne produkty poprawiające komfort życia.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Komfort ruchu</h3>
+            <p>
+              Kule łokciowe, balkoniki, trójnogi i wózki inwalidzkie — dobieramy sprzęt do
+              Twojej sytuacji i możliwości.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="refundacja" class="section reveal delay-2">
+        <h2>Refundacja sprzętu ortopedycznego NFZ</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Realizujemy wnioski</h3>
+            <p>
+              Pomagamy w realizacji wniosków NFZ zarówno dla dzieci, jak i dorosłych. Obsługujemy
+              szeroki zakres kodów refundacyjnych (m.in. J036, J037, J038, J039).
+            </p>
+          </article>
+          <article class="card">
+            <h3>Doświadczenie 20+ lat</h3>
+            <p>
+              Wspieramy pacjentów i ich rodziny od ponad dwóch dekad, doradzając w doborze
+              sprzętu i formalnościach.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="lokalizacja" class="section reveal delay-3">
+        <h2>Odwiedź nas w Łodzi</h2>
+        <div class="location">
+          <div class="map">
+            <iframe
+              title="Mapa Apteka Omega"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d19742.776648113628!2d19.477142!3d51.790681!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x149a2c434a6a22f9!2zQXB0ZWthIE9tZWdhIC0gU2tsZXAgTWVkeWN6bnksIMWBw7Nkxbo!5e0!3m2!1spl!2spl!4v1541672837492"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="card address" id="kontakt">
+            <h3>Dane kontaktowe</h3>
+            <div>
+              Apteka Omega - Sklep Medyczny 24<br />
+              <span>Boya-Żeleńskiego 12, 91-704 Łódź</span>
+            </div>
+            <div>
+              Telefon: <a href="tel:+48426565708">42 656 57 08</a>
+            </div>
+            <div>
+              Email: <a href="mailto:apteka@omega.lodz.pl">apteka@omega.lodz.pl</a>
+            </div>
+            <div>
+              Godziny otwarcia: <span>codziennie do 21:00 (również w weekendy)</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-logos">
+        <a
+          title="Rejestr Aptek"
+          href="https://rejestrymedyczne.csioz.gov.pl/ra/public-view/1009685"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            src="assets/footer/wspolne-logo-aptek-internetowych.jpg"
+            alt="Rejestr Aptek"
+            width="140"
+            height="140"
+          />
+        </a>
+        <a
+          href="http://www.gif.gov.pl/bip/internetowa-sprzedaz-le/415,Internetowa-sprzedaz-lekow.html"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            src="assets/footer/logo_bip.png"
+            alt="Biuletyn Informacji Publicznej"
+            width="216"
+            height="139"
+          />
+        </a>
+        <a
+          title="Zezwolenie na prowadzenie apteki"
+          href="assets/footer/koncesja.pdf"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            src="assets/footer/ikona_zezwolenie.png"
+            alt="Zezwolenie na prowadzenie Apteki"
+            width="140"
+            height="140"
+          />
+        </a>
+        <a title="Główny Inspektorat Farmaceutyczny" href="http://www.gif.gov.pl/" target="_blank" rel="noreferrer">
+          <img src="assets/footer/logo_gif.png" alt="Główny Inspektorat Farmaceutyczny" width="138" height="139" />
+        </a>
+        <a title="Wojewódzki Inspektorat Farmaceutyczny w Łodzi" href="http://lwif.pl/" target="_blank" rel="noreferrer">
+          <img
+            src="assets/footer/logo_wif_2.jpg"
+            alt="Wojewódzki Inspektorat Farmaceutyczny w Łodzi"
+            width="135"
+            height="135"
+          />
+        </a>
+        <a title="Okręgowa Izba Aptekarska w Łodzi" href="http://www.oia.lodz.pl/" target="_blank" rel="noreferrer">
+          <img
+            src="assets/footer/logo_oia_2.jpg"
+            alt="Okręgowa Izba Aptekarska w Łodzi"
+            width="140"
+            height="140"
+          />
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
